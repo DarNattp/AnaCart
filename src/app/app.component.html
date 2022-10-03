@@ -1,0 +1,160 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">AnaCart</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button routerLink="login" routerLinkActive="active">Login</button>
+      </li>
+      <li class="nav-item">
+        <button routerLink="cards" routerLinkActive="active">Cards</button>
+      </li>
+      <li class="nav-item">
+       <button routerLink="carousel" routerLinkActive="active">Carousel</button>
+      </li>
+      <li class="nav-item">
+       <button routerLink="specialpage" routerLinkActive="active">Special Page</button>
+      </li>
+      <li class="nav-item">
+        <button mat-button [matMenuTriggerFor]="animals">Products</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+</mat-menu>
+
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+
+ <footer id="footer" class="text-center text-lg-start bg-light text-muted">
+      
+      
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+        
+          <div class="row mt-3">
+            
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>DUCEN BLOG
+              </h6>
+              <p>
+                The Ducen blog is a platform for challenging ur perspectives and intelligence.
+              </p>
+            </div>
+            
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">
+                Platform
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Advanced Analytics</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Buisness Intelligence</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Analance Solutions</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+            </div>
+            
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">
+                SOLUTIONS
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Data Services</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Analytics Services</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Cybersecurity Services</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Application Services</a>
+              </p>
+            </div>
+            
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> 4/363 , Block-B, III Floor, Kandhanchavadi, Chennai, Tamil Nadu 600096</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                sfadilcs@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> +91 73958 92648</p>
+              <p><i class="fas fa-print me-3"></i> +1-844-382-3648</p>
+            </div>
+            
+          </div>
+          
+        </div>
+      </section>
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https:/ducenit.com/">ducenit.com</a>|  Ducen IT |  All Rights Reserved | Privacy Policy | Software License Agreement | Website Terms of Use |
+      </div>
+    </footer>

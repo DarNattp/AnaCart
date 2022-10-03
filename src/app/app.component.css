@@ -1,0 +1,24 @@
+
+button:link {
+    text-decoration: none;
+    background-color: yellow;
+  }
+  
+  button:visited {
+    background-color: cyan;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: lightgreen;
+    text-decoration: none;
+  }
+  
+  button:active {
+    background-color: hotpink;
+    text-decoration: none;
+  }
+
+ .nav-item{
+    margin: 20px;
+ }

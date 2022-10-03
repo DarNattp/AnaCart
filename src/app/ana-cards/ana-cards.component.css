@@ -1,0 +1,14 @@
+
+.parent-card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+    height: 350px;
+    overflow-Y:scroll;
+}
+.card{
+    margin: 20px;
+}
