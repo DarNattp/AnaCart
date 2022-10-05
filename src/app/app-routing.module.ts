@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AnaBodyComponent } from './ana-body/ana-body.component';
@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path:'',
-    component:AnaBodyComponent,
+    component:AnaCarouselComponent,
   },
   {
     path:'login',
@@ -27,6 +27,11 @@ const routes: Routes = [
     path:'cards',
     component:AnaCardsComponent,
   },
+  {
+    path:'about',
+    component:AboutComponent,
+  },
+
   {
     path:'carousel',
     component:AnaCarouselComponent,

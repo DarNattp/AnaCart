@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CardDetailsService } from '../services/card-details.service';
+import { stock } from '../stock';
 
 @Component({
   selector: 'app-ana-cards',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnaCardsComponent implements OnInit {
 
-  constructor() { }
+  stocks:stock[] |any;
+  CardDetailsService: any;
+  data: any;
 
-  ngOnInit(): void {
+  constructor() { 
+      this.CardDetailsService= new CardDetailsService;
   }
-
+  ngOnInit(): void {
+    this.stocks=this.CardDetailsService.getList();
+  }
 }

@@ -1,24 +1,14 @@
-
-button:link {
-    text-decoration: none;
-    background-color: yellow;
-  }
-  
-  button:visited {
-    background-color: cyan;
-    text-decoration: none;
-  }
-  
-  button:hover {
-    background-color: lightgreen;
-    text-decoration: none;
-  }
-  
-  button:active {
-    background-color: hotpink;
-    text-decoration: none;
-  }
-
- .nav-item{
+  .nav-item{
     margin: 20px;
- }
+  }
+  .statichead{
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.dynamicbody{
+  overflow-y: scroll;
+  height: 93vh;
+  margin-top: 19vh;
+}

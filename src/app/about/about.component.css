@@ -1,13 +1,12 @@
 .abouthead{
-    height: 50px;
-    background-color:rgb(109, 197, 109) ;
+    background-color:#dee2e6 ;
     font-size: x-large;
     display: flex;
     justify-content: center;
-
+    height: 100px;
+    padding-top: 40px;
 }
 .aboutcontent{
-    height:12vh;
-    background-color: aliceblue;
+    background-color: #dee2e6;
     margin: 100px;
 }

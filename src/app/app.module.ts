@@ -16,6 +16,7 @@ import {MaterialExampleModule} from '../environments/material.module';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CardDetailsService } from './services/card-details.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MaterialExampleModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [CardDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
