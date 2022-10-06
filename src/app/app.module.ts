@@ -17,6 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CardDetailsService } from './services/card-details.service';
+import { DetailsComponentComponent } from './details-component/details-component.component';
+import { CartComponentComponent } from './cart-component/cart-component.component';
 
 
 @NgModule({
@@ -25,7 +27,7 @@ import { CardDetailsService } from './services/card-details.service';
     AnaCardsComponent,
     AnaCarouselComponent,
     AnaBodyComponent,
-    AboutComponent,LoginComponent, AnaPageNotFoundComponent],
+    AboutComponent,LoginComponent, AnaPageNotFoundComponent, DetailsComponentComponent, CartComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

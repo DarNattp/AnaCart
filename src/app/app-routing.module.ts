@@ -5,9 +5,12 @@ import { AnaBodyComponent } from './ana-body/ana-body.component';
 import { AnaCardsComponent } from './ana-cards/ana-cards.component';
 import { AnaCarouselComponent } from './ana-carousel/ana-carousel.component';
 import { AnaPageNotFoundComponent } from './ana-page-not-found/ana-page-not-found.component';
+import { CartComponentComponent } from './cart-component/cart-component.component';
+import { DetailsComponentComponent } from './details-component/details-component.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  
   {
     path:'',
     component:AnaCarouselComponent,
@@ -15,13 +18,6 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent,
-    children:[
-      {
-        path:'about',
-        component:AboutComponent,
-  
-      }
-    ]
   },
   {
     path:'cards',
@@ -31,7 +27,14 @@ const routes: Routes = [
     path:'about',
     component:AboutComponent,
   },
-
+  {
+    path:'cart',
+    component:CartComponentComponent,
+  },
+  {
+    path:'Details',
+    component:DetailsComponentComponent,
+  },
   {
     path:'carousel',
     component:AnaCarouselComponent,
@@ -51,8 +54,6 @@ const routes: Routes = [
   }
   
 ];
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

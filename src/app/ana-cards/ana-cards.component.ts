@@ -12,6 +12,8 @@ export class AnaCardsComponent implements OnInit {
   stocks:stock[] |any;
   CardDetailsService: any;
   data: any;
+  index:any;
+  stock:any;
 
   constructor() { 
       this.CardDetailsService= new CardDetailsService;
@@ -19,4 +21,8 @@ export class AnaCardsComponent implements OnInit {
   ngOnInit(): void {
     this.stocks=this.CardDetailsService.getList();
   }
+ getdetails(data : number){
+    this.index=data-1;
+    this.CardDetailsService.getselecteditem(this.stocks[this.index]);
+ }
 }

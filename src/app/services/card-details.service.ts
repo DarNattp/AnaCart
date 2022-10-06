@@ -5,8 +5,16 @@ import { stock } from '../stock';
   providedIn: 'root'
 })
 export class CardDetailsService {
+  static getitem(): any {
+    throw new Error('Method not implemented.');
+  }
+  store:any;
 
   constructor() { }
+  getselecteditem(selected:any){
+    this.store=selected;
+   localStorage.setItem("currentselecteditem",JSON.stringify(this.store));
+    }
   public getList(){
     let stocks:stock[];
     stocks = [
