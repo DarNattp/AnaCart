@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { stock } from '../stock';
+import { CardDetailsService } from '../services/card-details.service';
 
 @Component({
   selector: 'app-ana-body',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ana-body.component.css']
 })
 export class AnaBodyComponent implements OnInit {
+stocki :stock[] | any;
+  CardDetailsService: CardDetailsService;
 
-  constructor() { }
+  constructor() { 
+    this.CardDetailsService= new CardDetailsService;
+  }
 
   ngOnInit(): void {
+    this.stocki=this.CardDetailsService.getList();
   }
 
 }

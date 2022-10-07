@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AdminComponentComponent } from './admin-component/admin-component.component';
 import { AnaBodyComponent } from './ana-body/ana-body.component';
 import { AnaCardsComponent } from './ana-cards/ana-cards.component';
 import { AnaCarouselComponent } from './ana-carousel/ana-carousel.component';
@@ -8,6 +9,8 @@ import { AnaPageNotFoundComponent } from './ana-page-not-found/ana-page-not-foun
 import { CartComponentComponent } from './cart-component/cart-component.component';
 import { DetailsComponentComponent } from './details-component/details-component.component';
 import { LoginComponent } from './login/login.component';
+import { SettingsComponentComponent } from './settings-component/settings-component.component';
+import { SignupComponentComponent } from './signup-component/signup-component.component';
 
 const routes: Routes = [
   
@@ -47,6 +50,19 @@ const routes: Routes = [
     path:'specialpage',
     component:AnaBodyComponent,
   },
+  {
+    path:'signup',
+    component:SignupComponentComponent,
+  },
+  {
+    path:'settings',
+    component:SettingsComponentComponent,
+  },
+  {
+    path:'admin',
+    component:AdminComponentComponent,
+  },
+
 
   {
     path:'**',

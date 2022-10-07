@@ -101,7 +101,7 @@ label.radio input:checked+span {
                           </div>
                           <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span>
                               <h5 class="text-uppercase">{{stock.ItemName}}</h5>
-                              <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{stock.price}}</span>
+                              <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{stock.Price}}</span>
                                   <div class="ml-2"> <small class="dis-price">$59</small> <span>40% OFF</span> </div>
                               </div>
                           </div>

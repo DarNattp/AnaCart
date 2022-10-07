@@ -11,7 +11,6 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { AnaPageNotFoundComponent } from './ana-page-not-found/ana-page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {MaterialExampleModule} from '../environments/material.module';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +18,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { CardDetailsService } from './services/card-details.service';
 import { DetailsComponentComponent } from './details-component/details-component.component';
 import { CartComponentComponent } from './cart-component/cart-component.component';
-
+import { SettingsComponentComponent } from './settings-component/settings-component.component';
+import { AdminComponentComponent } from './admin-component/admin-component.component';
+import { SignupComponentComponent } from './signup-component/signup-component.component';
+import { AnaheaderComponent } from './anaheader/anaheader.component';
+import { AnafooterComponent } from './anafooter/anafooter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,7 @@ import { CartComponentComponent } from './cart-component/cart-component.componen
     AnaCardsComponent,
     AnaCarouselComponent,
     AnaBodyComponent,
-    AboutComponent,LoginComponent, AnaPageNotFoundComponent, DetailsComponentComponent, CartComponentComponent],
+    AboutComponent,LoginComponent, AnaPageNotFoundComponent, DetailsComponentComponent, CartComponentComponent, SettingsComponentComponent, AdminComponentComponent, SignupComponentComponent, AnaheaderComponent, AnafooterComponent,LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

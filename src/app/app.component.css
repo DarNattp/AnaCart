@@ -1,14 +1,7 @@
   .nav-item{
     margin: 20px;
   }
-  .statichead{
-    height: 7vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 .dynamicbody{
-  overflow-y: scroll;
-  height: 93vh;
-  margin-top: 19vh;
+  height: calc(100% - 65px);
+  overflow: auto;
 }
