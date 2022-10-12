@@ -9,7 +9,7 @@ styleUrls: ['./ana-carousel.component.css']})
 export class AnaCarouselComponent implements OnInit{
   images:any
   ngOnInit(): void {
-    this.images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+    this.images = ['1.jpg'].map((n) => `assets/${n}`);
   }
 
   paused = false;

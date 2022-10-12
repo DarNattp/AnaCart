@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { AdminComponentComponent } from './admin-component/admin-component.component';
+
 import { AnaBodyComponent } from './ana-body/ana-body.component';
 import { AnaCardsComponent } from './ana-cards/ana-cards.component';
 import { AnaCarouselComponent } from './ana-carousel/ana-carousel.component';
@@ -58,10 +58,7 @@ const routes: Routes = [
     path:'settings',
     component:SettingsComponentComponent,
   },
-  {
-    path:'admin',
-    component:AdminComponentComponent,
-  },
+
 
 
   {

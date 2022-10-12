@@ -44,24 +44,32 @@
   
     
    
-    <section class="section">
+    <section class="section0" >
       <div class="h">
         <h1><span>Shop By</span> Categories</h1>
       </div>
       <div class="ab box">
+      <ng-container
+       *ngFor="let stock of stocks; index as i">
+       <div class="item item-{{i + 1}}">
+        <img src="{{stock.ImageUrl}}" alt="" />
+      </div>
+      </ng-container>
+      </div>
+    <!-- <div class="ab box">
         <div class="item item-1">
-          <img src="{{stocki.ImageUrl}}" alt="" />
+          <img src="{{stocks[0].ImageUrl}}" alt="" />
         </div>
         <div class="item item-2">
-          <img src={{stocki.ImageUrl}} alt="" />
+          <img src="{{stocks[1].ImageUrl}}" alt="" />
         </div>
         <div class="item item-3">
-          <img src={{stocki.ImageUrl}} alt="" />
+          <img src="{{stocks[2].ImageUrl}}" alt="" />
         </div>
         <div class="item item-4">
-          <img src={{stocki.ImageUrl}} alt="" />
+          <img src="{{stocks[3].ImageUrl}}" alt="" />
         </div>
-      </div>
+      </div> -->
     </section>
   
    
@@ -72,7 +80,7 @@
       <div class="ac-center box">
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src="{{stocks[0].ImageUrl}}" alt="" />
           </div>
           <p>Luxuary Leather hand bag-black</p>
           <div class="rating">
@@ -87,7 +95,7 @@
   
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Covered leather sandal</p>
           <div class="rating">
@@ -102,7 +110,7 @@
   
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Cute Wallet</p>
           <div class="rating">
@@ -116,7 +124,7 @@
         </div>
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Ladies wallet-purple</p>
           <div class="rating">
@@ -130,7 +138,7 @@
         </div>
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Black Sandals</p>
           <div class="rating">
@@ -144,7 +152,7 @@
         </div>
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Wallet-Ladies-2021</p>
           <div class="rating">
@@ -158,7 +166,7 @@
         </div>
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Handbag-Ladies-Pink</p>
           <div class="rating">
@@ -172,7 +180,7 @@
         </div>
         <div class="ac">
           <div class="img-cover">
-            <img src={{stocki.ImageUrl}} alt="" />
+            <img src={{stocks[0].ImageUrl}} alt="" />
           </div>
           <p>Mini Leather Wallet</p>
           <div class="rating">

@@ -19,18 +19,16 @@ import { CardDetailsService } from './services/card-details.service';
 import { DetailsComponentComponent } from './details-component/details-component.component';
 import { CartComponentComponent } from './cart-component/cart-component.component';
 import { SettingsComponentComponent } from './settings-component/settings-component.component';
-import { AdminComponentComponent } from './admin-component/admin-component.component';
 import { SignupComponentComponent } from './signup-component/signup-component.component';
 import { AnaheaderComponent } from './anaheader/anaheader.component';
 import { AnafooterComponent } from './anafooter/anafooter.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     AnaCardsComponent,
     AnaCarouselComponent,
     AnaBodyComponent,
-    AboutComponent,LoginComponent, AnaPageNotFoundComponent, DetailsComponentComponent, CartComponentComponent, SettingsComponentComponent, AdminComponentComponent, SignupComponentComponent, AnaheaderComponent, AnafooterComponent,LoginComponent],
+    AboutComponent,LoginComponent, AnaPageNotFoundComponent, DetailsComponentComponent, CartComponentComponent, SettingsComponentComponent,SignupComponentComponent, AnaheaderComponent, AnafooterComponent,LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

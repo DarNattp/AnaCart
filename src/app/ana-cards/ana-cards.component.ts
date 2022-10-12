@@ -8,21 +8,31 @@ import { stock } from '../stock';
   styleUrls: ['./ana-cards.component.css']
 })
 export class AnaCardsComponent implements OnInit {
+  
 
   stocks:stock[] |any;
-  CardDetailsService: any;
   data: any;
   index:any;
   stock:any;
 
-  constructor() { 
-      this.CardDetailsService= new CardDetailsService;
+  constructor(private cardDetailsService: CardDetailsService ) { 
+
   }
   ngOnInit(): void {
-    this.stocks=this.CardDetailsService.getList();
+    this.stocks=this.cardDetailsService.getList();
   }
  getdetails(data : number){
     this.index=data-1;
-    this.CardDetailsService.getselecteditem(this.stocks[this.index]);
+    this.cardDetailsService.getselecteditem(this.stocks[this.index]);
  }
+incrementCount(){
+  this.cardDetailsService.incrementCount();
 }
+decreaseCount(){
+  this.cardDetailsService.decreaseCount();
+}
+resetCount(){
+  this.cardDetailsService.resetCount();
+}
+}
+

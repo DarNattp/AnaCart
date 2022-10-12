@@ -69,21 +69,29 @@
                 <button mat-menu-item disabled>Velociraptor</button>
               </mat-menu>
             </li>
-            <li class="nav-item">
-              <mat-icon matBadge="15" matBadgeColor="warn"><a class="btn btn-outline-success" routerLink="cart"><i class="fa fa-shopping-cart" style="font-size:20px"></i></a></mat-icon>
-            </li>
           </ul>
           
           
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
+          </form>
+          <form class="d-flex">
+          
+              <a class="btn btn-outline-success" [matBadge]="notificationCount" matBadgeSize="small" matBadgeColor="warn">
+              <i routerLink="cart" class="fa fa-shopping-cart" style="font-size:20px"></i>
+              </a>
+              <!-- <br/>
+              <button mat-raised-button (click)="incrementCount()">+</button>
+              <button mat-raised-button (click)="decreaseCount()">-</button>
+              <button mat-raised-button (click)="resetCount()">reset</button> -->
+  
           </form>
           <button mat-button [matMenuTriggerFor]="menu" class="btn btn-outline-success"><i
-              class='fas fa-user'></i></button>
+              class='fas fa-user' style="font-size:25px"></i></button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="openDialog()">Log In</button>
-            <button mat-menu-item routerLink="signup">Sign Up</button>
+            <!-- <button mdbBtn color="primary" (click)="openModal()">Open modal</button> -->
             <button mat-menu-item routerLink="settings">Settings</button>
             <button mat-menu-item routerLink="admin">Admin</button>
             <button mat-menu-item routerLink="about">About Us</button>
