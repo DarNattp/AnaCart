@@ -27,7 +27,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/angular-dark-mode/angular-dark-mode.js"]
           },
           "configurations": {
             "production": {
@@ -103,5 +103,5 @@
   },
   "cli": {
     "analytics": "e13f9893-7e73-4238-9294-d78f284d7d2d"
-  }
+ 
 }
