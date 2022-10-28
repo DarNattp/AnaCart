@@ -1,0 +1,53 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentBook" class="edit-form">
+      <h4>User Update</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="currentBook.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="username">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            [(ngModel)]="currentBook.username"
+            name="username"
+          />
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              [(ngModel)]="currentBook.city"
+              name="city"
+            />
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip</label>
+            <input
+              type="text"
+              class="form-control"
+              id="zip"
+              [(ngModel)]="currentBook.zip"
+              name="zip"
+            />
+          </div>
+  
+      </form>
+  
+      <button type="button" class="btn btn-danger" (click)="updateBook()" >Update</button>
+      <button type="button" class="btn btn-warning" (click)="deleteBook()">Delete</button>
+
+    </div>
+  
+  </div>

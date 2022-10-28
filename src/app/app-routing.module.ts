@@ -7,6 +7,7 @@ import { AnaCardsComponent } from './ana-cards/ana-cards.component';
 import { AnaCarouselComponent } from './ana-carousel/ana-carousel.component';
 import { AnaPageNotFoundComponent } from './ana-page-not-found/ana-page-not-found.component';
 import { CartComponentComponent } from './cart-component/cart-component.component';
+import { DetailsComponent } from './components/details/details.component';
 import { DetailsComponentComponent } from './details-component/details-component.component';
 import { LoginComponent } from './login/login.component';
 import { SettingsComponentComponent } from './settings-component/settings-component.component';
@@ -54,9 +55,16 @@ const routes: Routes = [
     path:'signup',
     component:SignupComponentComponent,
   },
+  { 
+  path: '', 
+  redirectTo: 'settings', 
+  pathMatch: 'full' },
   {
     path:'settings',
     component:SettingsComponentComponent,
+  },
+  {
+    path:'setting/:id',component: DetailsComponent
   },
 
 

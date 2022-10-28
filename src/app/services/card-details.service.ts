@@ -30,6 +30,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -37,6 +38,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹4999',
+        Category:'Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -44,6 +46,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹4990',
+        Category:'Shirts',
         Caption: 'Made with fine cotton',
       },
 
@@ -52,6 +55,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹48899',
+        Category:'Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -59,6 +63,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'T-Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -66,6 +71,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'T-Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -73,6 +79,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'T-Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -80,6 +87,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'T-Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -87,6 +95,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'Floral Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -94,6 +103,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'Floral Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -101,6 +111,7 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'Floral Shirts',
         Caption: 'Made with fine cotton',
       },
       {
@@ -108,11 +119,47 @@ export class CardDetailsService {
         ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
         ItemName: 'White T-shirt',
         Price: '₹499',
+        Category:'Floral Shirts',
         Caption: 'Made with fine cotton',
       },
     ]
     return stocks;
   }
+
+
+  public category() {
+    let stocks: stock[];
+    stocks = [
+      {
+        Id: 1,
+        ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
+        ItemName: 'White T-shirt',
+        Price: '₹499',
+        Category:'Shirts',
+        Caption: 'Made with fine cotton',
+      },
+      {
+        Id: 2,
+        ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
+        ItemName: 'White T-shirt',
+        Price: '₹4999',
+        Category:'T-Shirts',
+        Caption: 'Made with fine cotton',
+      },
+      {
+        Id: 3,
+        ImageUrl: 'https://images.bewakoof.com/uploads/grid/app/types-of-t-shirts-for-men-bewakoof-blog-Crew-Neck-Style-1612353776.jpg',
+        ItemName: 'White T-shirt',
+        Price: '₹4990',
+        Category:'Floral Shirts',
+        Caption: 'Made with fine cotton',
+      },
+
+    ]
+    return stocks;
+  }
+
+
  
   count: number = 0;
   incrementCount() {
