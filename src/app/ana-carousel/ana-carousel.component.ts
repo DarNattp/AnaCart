@@ -9,7 +9,13 @@ styleUrls: ['./ana-carousel.component.css']})
 export class AnaCarouselComponent implements OnInit{
   images:any
   ngOnInit(): void {
-    this.images = ['1.jpg','1.jpg'].map((n) => `assets/${n}`);
+    this.images = 
+    ['Footwear_Top-Banner.jpg',
+    'Fragrances_Top-Banner.jpg',
+    'home_Top-Banner.jpg',
+    'infuse_Top-Banner.jpg',
+    'suits-and-jackets_Top-Banner.jpg',
+    'womenswear_Top-Banner.jpg',].map((n) => `assets/${n}`);
   }
 
   paused = false;

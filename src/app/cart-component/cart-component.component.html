@@ -3,13 +3,12 @@
       <img class="card-img-top" src={{stock.ImageUrl}} alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{stock.ItemName}}</h5>
-        <p class="card-text">{{stock.Price                }}</p>
-        <button class="btn btn-outline-success" routerLink="Details" routerLinkActive="active"
-         (click)="getdetails(stock.Id)">Buy</button>
-
+        <p class="card-text">{{stock.Price }}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">{{stock.Caption}}</li>
       </ul>
-    </div>
       
+          
+    </div>
+    <button class="btn btn-outline-success" type="submit"><i class="fa fa-check" style="font-size:20px">CHECK OUT</i></button>

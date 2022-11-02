@@ -14,3 +14,6 @@
 .card{
     margin: 20px;
 }
+.card-img, .card-img-bottom, .card-img-top {
+    height: 350px;
+}

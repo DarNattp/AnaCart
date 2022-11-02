@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import {MatDialog, _closeDialogVia} from '@angular/material/dialog';
 import { LoginComponent } from 'src/app/login/login.component';
 import { CardDetailsService } from '../services/card-details.service';
 @Component({
@@ -26,6 +26,9 @@ export class AnaheaderComponent implements OnInit {
   title = 'Angularapp';
   openDialog() {
     this.dialog.open(LoginComponent);
+  }
+  closeDialog() {
+    this.dialog.closeAll();
   }
 }
 

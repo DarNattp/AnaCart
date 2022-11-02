@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from '../services/books.service';
-
+import {MatDialog, _closeDialogVia} from '@angular/material/dialog';
 
 
 @Component({
@@ -9,6 +9,7 @@ import { BooksService } from '../services/books.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  [x: string]: any;
 
   book={
     name:'',
@@ -17,10 +18,11 @@ export class LoginComponent implements OnInit {
     zip:'',
   }
   isDataAdded = false;
+  
   // book: any;
   // booksService: any;
   // isBookAdded: boolean;
-  constructor(private booksService:BooksService) {}
+  constructor(private booksService:BooksService,public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
@@ -29,12 +31,13 @@ export class LoginComponent implements OnInit {
       name: this.book.name,
       username: this.book.username,
       city:this.book.city,
-      zip:this.book.zip
+      zip:this.book.zip,
     };
     if (!data.name) {
-      alert('Please add title!');
+      alert('Please add details!');
       return;
     }
+    
 
     this.booksService.create(data)
       .subscribe(
@@ -42,6 +45,12 @@ export class LoginComponent implements OnInit {
           console.log(response);
           this.isDataAdded = true;
         })
+      this.closeDialog();
+
+       
   
+}
+closeDialog() {
+  this.dialog.closeAll();
 }
 }

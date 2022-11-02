@@ -16,10 +16,10 @@ export class CartComponentComponent implements OnInit {
   constructor(public cardDetailsService: CardDetailsService) {}
 
   ngOnInit(): void {
-    this.stock = this.cardDetailsService.getList();
+    this.stocks = this.cardDetailsService.getList();
   }
   getdetails(data: number) {
     this.index = data - 1;
-    this.cardDetailsService.getselecteditem(this.stock[this.index]);
+    this.cardDetailsService.getselecteditem(this.stocks[this.index]);
   }
 }

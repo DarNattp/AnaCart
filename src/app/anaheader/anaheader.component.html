@@ -21,13 +21,12 @@
               </mat-menu>
   
               <mat-menu #vertebrates="matMenu">
-                <button mat-menu-item>Insects</button>
-                <button mat-menu-item>Molluscs</button>
-                <button mat-menu-item>Crustaceans</button>
-                <button mat-menu-item>Corals</button>
-                <button mat-menu-item>Arachnids</button>
-                <button mat-menu-item>Velvet worms</button>
-                <button mat-menu-item>Horseshoe crabs</button>
+                <button mat-menu-item>Kitchen & Dining</button>
+                <button mat-menu-item>Living Room Furniture</button>
+                <button mat-menu-item>Bedroom Furniture</button>
+                <button mat-menu-item>Lightings & Electricals</button>
+                <button mat-menu-item>Appliances</button>
+                <button mat-menu-item>Smart Home Appliances</button>
                 
               </mat-menu>
               <mat-menu #vertebrates="matMenu">
@@ -47,36 +46,33 @@
               </mat-menu>
   
               <mat-menu #fish="matMenu">
-                <button mat-menu-item>Baikal oilfish</button>
-                <button mat-menu-item>Bala shark</button>
-                <button mat-menu-item>Ballan wrasse</button>
-                <button mat-menu-item>Bamboo shark</button>
-                <button mat-menu-item>Banded killifish</button>
+                <button mat-menu-item>Formal Shoes</button>
+                <button mat-menu-item>Casual shoes</button>
+                <button mat-menu-item>Gym shoes</button>
+                <button mat-menu-item>Sports shoes</button>
+                <button mat-menu-item>Sneakers</button>
               </mat-menu>
   
               <mat-menu #amphibians="matMenu">
-                <button mat-menu-item>Sonoran desert toad</button>
-                <button mat-menu-item>Western toad</button>
-                <button mat-menu-item>Arroyo toad</button>
-                <button mat-menu-item>Yosemite toad</button>
+                <button mat-menu-item>Shirts</button>
+                <button mat-menu-item>Pants</button>
               </mat-menu>
   
               <mat-menu #reptiles="matMenu">
-                <button mat-menu-item>Banded Day Gecko</button>
-                <button mat-menu-item>Banded Gila Monster</button>
-                <button mat-menu-item>Black Tree Monitor</button>
-                <button mat-menu-item>Blue Spiny Lizard</button>
-                <button mat-menu-item disabled>Velociraptor</button>
+                <button mat-menu-item>T shirts</button>
+                <button mat-menu-item>Jeans</button>
+                <button mat-menu-item>Sweatshirts</button>
+                <button mat-menu-item>Ethnic</button>
               </mat-menu>
             </li>
           </ul>
           
           
-          <form class="d-flex">
+          <form class="d-flex flexbutton" style="margin-right: 10px;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
           </form>
-          <form class="d-flex">
+          <form class="d-flex flexbutton" style="margin-right: 10px;">
           
               <a class="btn btn-outline-success" [matBadge]="notificationCount" matBadgeSize="small" matBadgeColor="warn">
               <i routerLink="cart" class="fa fa-shopping-cart" style="font-size:20px"></i>
@@ -93,7 +89,6 @@
             <button mat-menu-item (click)="openDialog()">Log In</button>
             <!-- <button mdbBtn color="primary" (click)="openModal()">Open modal</button> -->
             <button mat-menu-item routerLink="settings">Settings</button>
-            <button></button>
             <button mat-menu-item routerLink="admin">Admin</button>
             <button mat-menu-item routerLink="about">About Us</button>
             <button mat-menu-item >Sign Out</button>
