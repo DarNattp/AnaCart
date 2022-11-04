@@ -99,7 +99,7 @@ label.radio input:checked+span {
                           <div class="d-flex justify-content-between align-items-center">
                               <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">Back</span> </div> <i class="fa fa-shopping-cart text-muted"></i>
                           </div>
-                          <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span>
+                          <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">AnaCart</span>
                               <h5 class="text-uppercase">{{stock.ItemName}}</h5>
                               <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{stock.Price}}</span>
                                   <div class="ml-2"> <small class="dis-price">$59</small> <span>40% OFF</span> </div>

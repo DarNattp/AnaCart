@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
       alert('Please add details!');
       return;
     }
-    
-
     this.booksService.create(data)
       .subscribe(
         response => {
@@ -46,11 +44,8 @@ export class LoginComponent implements OnInit {
           this.isDataAdded = true;
         })
       this.closeDialog();
-
-       
-  
 }
-closeDialog() {
+closeDialog(){
   this.dialog.closeAll();
 }
 }

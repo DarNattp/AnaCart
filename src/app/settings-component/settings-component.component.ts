@@ -27,7 +27,7 @@ export class SettingsComponentComponent implements OnInit {
   deleteBook(id:number){
     this.booksService.delete(id)
     .subscribe(
-      response => {
+      _response => {
         this.getAllBooks();
       });
   }

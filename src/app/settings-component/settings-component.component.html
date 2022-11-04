@@ -21,11 +21,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let book of books;">
-            <td><b><em>{{book.name}}</em></b></td>
+            <td>{{book.name}}</td>
             <td>{{book.username}}</td>
             <td>{{book.city}}</td>
-             <td>{{book.zip}}</td>
-
+            <td>{{book.zip}}</td>
             <td>
               <button type="button" class="btn btn-success" routerLink="/setting/{{book.id}}">Edit</button>
               <button type="button" class="btn btn-success" (click)="deleteBook(book.id)">Delete</button>
