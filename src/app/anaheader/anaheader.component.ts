@@ -25,7 +25,11 @@ export class AnaheaderComponent implements OnInit {
    }
   title = 'Angularapp';
   openDialog() {
-    this.dialog.open(LoginComponent);
+    this.dialog.open(LoginComponent,
+      {
+        width:'50%'
+      
+    });
   }
   closeDialog() {
     this.dialog.closeAll();

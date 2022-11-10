@@ -4,3 +4,7 @@
 .paddingproblem{
     padding: 0px;
 }
+
+.btn-outline-success {
+    border: 1px solid #198754;
+}

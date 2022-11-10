@@ -22,8 +22,8 @@ import { SettingsComponentComponent } from './settings-component/settings-compon
 import { SignupComponentComponent } from './signup-component/signup-component.component';
 import { AnaheaderComponent } from './anaheader/anaheader.component';
 import { AnafooterComponent } from './anafooter/anafooter.component';
-import { EmailValidatorDirective } from './email-validator.directive';
 import { DetailsComponent } from './components/details/details.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,6 @@ import { DetailsComponent } from './components/details/details.component';
     AnaheaderComponent, 
     AnafooterComponent,
     LoginComponent, 
-    EmailValidatorDirective, 
     DetailsComponent
   ],
   imports: [

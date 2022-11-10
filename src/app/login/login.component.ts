@@ -9,6 +9,10 @@ import {MatDialog, _closeDialogVia} from '@angular/material/dialog';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
+  
+show: boolean = false;
+
   [x: string]: any;
 
   book={
@@ -22,7 +26,12 @@ export class LoginComponent implements OnInit {
   // book: any;
   // booksService: any;
   // isBookAdded: boolean;
-  constructor(private booksService:BooksService,public dialog: MatDialog) {}
+  constructor(private booksService:BooksService,public dialog: MatDialog) {
+ 
+  }
+  password() {
+    this.show = !this.show;
+}
 
   ngOnInit(): void {}
 
@@ -40,6 +49,7 @@ export class LoginComponent implements OnInit {
     this.booksService.create(data)
       .subscribe(
         response => {
+          this.booksService.availablebooks.push(data);
           console.log(response);
           this.isDataAdded = true;
         })
@@ -48,4 +58,6 @@ export class LoginComponent implements OnInit {
 closeDialog(){
   this.dialog.closeAll();
 }
+
 }
+

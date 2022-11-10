@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@fortawesome/fontawesome-free": "^6.0.0",
+    "@ionic/angular": "^6.3.5",
     "@material/top-app-bar": "^14.0.0",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",

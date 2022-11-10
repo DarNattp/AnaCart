@@ -19,3 +19,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .carousel-control-prev-icon::after, .carousel-control-next-icon::after {
     content: none !important;
   }
+
+  .mat-dialog-container {
+        box-shadow: none;
+    background: none;
+  }

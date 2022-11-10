@@ -9,11 +9,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item" class="d-flex flexbutton" style="margin-right: 10px;">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
+            </li> 
             <li class="nav-item">
-              <a class="btn btn-outline-success" routerLink="">Home</a>
-            </li>
-            <li class="nav-item">
-              <button mat-button [matMenuTriggerFor]="animals" class="paddingproblem"><a class="btn btn-outline-success">Products</a></button>
+              <button mat-button [matMenuTriggerFor]="animals" class="paddingproblem"><a class="btn btn-success">Products</a></button>
               <mat-menu #animals="matMenu">
                 <button mat-menu-item [matMenuTriggerFor]="vertebrates">Home & Furniture</button>
                 <button mat-menu-item [matMenuTriggerFor]="invertebrates">Women's Clothing</button>
@@ -66,15 +67,9 @@
               </mat-menu>
             </li>
           </ul>
-          
-          
-          <form class="d-flex flexbutton" style="margin-right: 10px;">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
-          </form>
           <form class="d-flex flexbutton" style="margin-right: 10px;">
           
-              <a class="btn btn-outline-success" [matBadge]="notificationCount" matBadgeSize="small" matBadgeColor="warn">
+              <a class="btn btn-success" [matBadge]="notificationCount" matBadgeSize="small" matBadgeColor="warn">
               <i routerLink="cart" class="fa fa-shopping-cart" style="font-size:20px"></i>
               </a>
               <!-- <br/>
@@ -83,7 +78,7 @@
               <button mat-raised-button (click)="resetCount()">reset</button> -->
   
           </form>
-          <button mat-button [matMenuTriggerFor]="menu" class="btn btn-outline-success"><i
+          <button mat-button [matMenuTriggerFor]="menu" class="btn btn-success"><i
               class='fas fa-user' style="font-size:25px"></i></button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="openDialog()">Log In</button>

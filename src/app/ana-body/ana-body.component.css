@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"); */
 
 *,
 *::before,
@@ -114,14 +114,13 @@ img {
   margin-inline: 50px;
   padding-block: 20px;
   border-radius: 20%/50%;
+  
 /*background-blend-mode: overlay;*/
 }
 
 .intro-content {
   height: 100%;
 }
-
-
 
 .dis {
   display: inline-block;
@@ -135,6 +134,7 @@ img {
   font-weight: 600;
   font-size: 50px;
   text-align: center;
+  padding-top: 50px;
 }
 
 .intro h2 {
@@ -171,7 +171,7 @@ img {
 
 /* Section */
 .section {
-  padding: 160px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 /* Benefits */
@@ -213,6 +213,7 @@ img {
 
 .h h1 {
   font-weight: 400;
+  padding-top: 50px;
 }
 
 .h span {

@@ -10,6 +10,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .card{
     margin: 20px;

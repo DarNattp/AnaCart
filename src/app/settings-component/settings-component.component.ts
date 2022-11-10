@@ -6,11 +6,10 @@ import { BooksService } from '../services/books.service';
   styleUrls: ['./settings-component.component.css']
 })
 export class SettingsComponentComponent implements OnInit {
-  books: any;
   currentBook:any;
   currentIndex = -1;
   searchTitle = '';
-  constructor(private booksService: BooksService) { }
+  constructor(public booksService: BooksService) { }
 
   ngOnInit(): void {
     this.getAllBooks();
@@ -19,16 +18,17 @@ export class SettingsComponentComponent implements OnInit {
     this.booksService.list()
       .subscribe(
         (books: any) => {
-          this.books = books;
+          this.booksService.availablebooks = books;
         });
   }
 
   // Delete action
   deleteBook(id:number){
+    alert('The record will be deleted');
     this.booksService.delete(id)
     .subscribe(
       _response => {
-        this.getAllBooks();
+        this.booksService.availablebooks= this.booksService.availablebooks.filter((b: any) => b.id != id);
       });
   }
 }

@@ -20,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let book of books;">
+          <tr *ngFor="let book of booksService.availablebooks">
             <td>{{book.name}}</td>
             <td>{{book.username}}</td>
             <td>{{book.city}}</td>
