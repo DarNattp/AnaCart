@@ -1,0 +1,14 @@
+<div class="parent-card-holder">
+    <div class="card" style="width: 18rem;"  *ngFor="let stock of stocks">
+      <img class="card-img-top" src={{stock.ImageUrl}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{stock.ItemName}}</h5>
+        <p class="card-text">{{stock.Price }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{stock.Caption}}</li>
+      </ul>
+      
+          
+    </div>
+    <button class="btn btn-outline-success" type="submit"><i class="fa fa-check" style="font-size:20px">CHECK OUT</i></button>

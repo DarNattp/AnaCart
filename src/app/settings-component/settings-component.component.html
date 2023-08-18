@@ -1,0 +1,40 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-4">
+        <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="searchTitle" />
+      </div>
+    </div>
+    <div class="col-md-12">
+      <h1>User List</h1>
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">mailid</th>
+            <th scope="col">password</th>
+            <th scope="col">reEnteredPassword</th>
+
+            <th scope="col" style="min-width: 150px;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of booksService.availablebooks">
+            <td>{{book.name}}</td>
+            <td>{{book.mailid}}</td>
+            <td>{{book.password}}</td>
+            <td>{{book.reEnteredPassword}}</td>
+            <td>
+              <button type="button" class="btn btn-success" routerLink="/setting/{{book.id}}">Update</button>
+              <button type="button" class="btn btn-success" (click)="deleteBook(book.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
+
+
+
+  

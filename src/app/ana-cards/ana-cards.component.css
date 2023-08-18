@@ -1,0 +1,20 @@
+.statichead{
+    height: 7vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.parent-card-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.card{
+    margin: 20px;
+}
+.card-img, .card-img-bottom, .card-img-top {
+    height: 350px;
+}

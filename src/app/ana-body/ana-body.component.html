@@ -1,0 +1,197 @@
+
+<header class="header">
+    <div class="intro ">
+       <h1>TRY OUT OUR PRODUCTS</h1>
+            <h2>
+              Up to<br>
+              <span class="dis">30% 
+                Discount</span><br>
+              on This <br />
+                Half yearly season
+            </h2>
+            <h3>From 1st Aug to 31st Aug</h3>
+            <div class="center">
+            <a routerLink="cards" class="btn">SHOP NOW</a>
+            </div>
+          </div>
+        
+    </header>
+  
+    
+    <section class="section benefits">
+      <div class="benefit-center box">
+        <div class="benefit">
+          <span class="icon"><i class="bx bx-purchase-tag"></i></span>
+          <h4>Free Shipping</h4>
+          <span class="text">For orders above 1000 Rupees</span>
+        </div>
+  
+       
+        <div class="benefit">
+          <span class="icon"><i class="bx bx-book-reader"></i></span>
+          <h4>10-Day Returns</h4>
+          <span class="text">Shop without any fear</span>
+        </div>
+  
+        <div class="benefit">
+          <span class="icon"><i class="bx bx-headphone"></i></span>
+          <h4>24/7 Support</h4>
+          <span class="text">We are always there to help you</span>
+        </div>
+      </div>
+    </section>
+  
+  
+    
+   
+    <section class="section0" >
+      <div class="h">
+        <h1><span>Shop By</span> Categories</h1>
+      </div>
+      <div class="ab box">
+      <ng-container
+       *ngFor="let stock of stocks; index as i">
+       <div class="item item-{{i + 1}}">
+        <img src="{{stock.ImageUrl}}" alt="" />
+      </div>
+      </ng-container>
+      </div>
+    <!-- <div class="ab box">
+        <div class="item item-1">
+          <img src="{{stocks[0].ImageUrl}}" alt="" />
+        </div>
+        <div class="item item-2">
+          <img src="{{stocks[1].ImageUrl}}" alt="" />
+        </div>
+        <div class="item item-3">
+          <img src="{{stocks[2].ImageUrl}}" alt="" />
+        </div>
+        <div class="item item-4">
+          <img src="{{stocks[3].ImageUrl}}" alt="" />
+        </div>
+      </div> -->
+    </section>
+  
+   
+    <section class="section">
+      <div class="h">
+        <h1>Popular <span>Products</span></h1>
+      </div>
+      <div class="ac-center box">
+        <div class="ac">
+          <div class="img-cover">
+            <img src="{{stocks[0].ImageUrl}}" alt="" />
+          </div>
+          <p>Luxuary Leather hand bag-black</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 8500</div>
+        </div>
+  
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Covered leather sandal</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 5000</div>
+        </div>
+  
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Cute Wallet</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 1200</div>
+        </div>
+        <!-- <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Ladies wallet-purple</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 2000</div>
+        </div>
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Black Sandals</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 3200</div>
+        </div>
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Wallet-Ladies-2021</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 1600</div>
+        </div>
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Handbag-Ladies-Pink</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 5600</div>
+        </div>
+        <div class="ac">
+          <div class="img-cover">
+            <img src={{stocks[0].ImageUrl}} alt="" />
+          </div>
+          <p>Mini Leather Wallet</p>
+          <div class="rating">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          <div class="price">RS 1500</div> -->
+        </div>
+      
+    </section>
+  

@@ -1,0 +1,53 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentBook" class="edit-form">
+      <h4>User Update</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="currentBook.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="mailid">mailid</label>
+          <input
+            type="text"
+            class="form-control"
+            id="mailid"
+            [(ngModel)]="currentBook.mailid"
+            name="mailid"
+          />
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input
+              type="text"
+              class="form-control"
+              id="password"
+              [(ngModel)]="currentBook.password"
+              name="password"
+            />
+          </div>
+          <div class="form-group">
+            <label for="reEnteredPassword">reEnteredPassword</label>
+            <input
+              type="text"
+              class="form-control"
+              id="reEnteredPassword"
+              [(ngModel)]="currentBook.reEnteredPassword"
+              name="reEnteredPassword"
+            />
+          </div>
+  
+      </form>
+  
+      <button type="button" class="btn btn-danger" (click)="updateBook()" >Update</button>
+      <button type="button" class="btn btn-warning" (click)="deleteBook()">Delete</button>
+
+    </div>
+  
+  </div>

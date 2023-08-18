@@ -1,0 +1,8 @@
+  .nav-item{
+    margin: 20px;
+  }
+.dynamicbody{
+  height: calc(100% - 65px);
+  overflow: auto;
+  overflow-x: hidden;
+}

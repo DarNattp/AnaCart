@@ -1,0 +1,94 @@
+<div class="statichead">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fab fa-adn" style='font-size:36px;color: black;'
+            aria-hidden="true">AnaCart</i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item" class="d-flex flexbutton" style="margin-right: 10px;">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit"><i class="fa fa-search" style="font-size:20px"></i></button>
+            </li> 
+            <li class="nav-item">
+              <button mat-button [matMenuTriggerFor]="animals" class="paddingproblem"><a class="btn btn-success">Products</a></button>
+              <mat-menu #animals="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="vertebrates">Home & Furniture</button>
+                <button mat-menu-item [matMenuTriggerFor]="invertebrates">Women's Clothing</button>
+                <button mat-menu-item [matMenuTriggerFor]="invertebrates">Men's Clothing</button>
+              </mat-menu>
+  
+              <mat-menu #vertebrates="matMenu">
+                <button mat-menu-item>Kitchen & Dining</button>
+                <button mat-menu-item>Living Room Furniture</button>
+                <button mat-menu-item>Bedroom Furniture</button>
+                <button mat-menu-item>Lightings & Electricals</button>
+                <button mat-menu-item>Appliances</button>
+                <button mat-menu-item>Smart Home Appliances</button>
+                
+              </mat-menu>
+              <mat-menu #vertebrates="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="fish">Footwear</button>
+                <button mat-menu-item [matMenuTriggerFor]="amphibians">Formals</button>
+                <button mat-menu-item [matMenuTriggerFor]="reptiles">Casuals</button>
+                <button mat-menu-item>Accessories</button>
+                <button mat-menu-item>Suits and Blazers</button>
+              </mat-menu>
+  
+              <mat-menu #invertebrates="matMenu">
+                <button mat-menu-item [matMenuTriggerFor]="fish">Footwear</button>
+                <button mat-menu-item [matMenuTriggerFor]="amphibians">Formals</button>
+                <button mat-menu-item [matMenuTriggerFor]="reptiles">Casuals</button>
+                <button mat-menu-item>Accessories</button>
+                <button mat-menu-item>Suits and Blazers</button>
+              </mat-menu>
+  
+              <mat-menu #fish="matMenu">
+                <button mat-menu-item>Formal Shoes</button>
+                <button mat-menu-item>Casual shoes</button>
+                <button mat-menu-item>Gym shoes</button>
+                <button mat-menu-item>Sports shoes</button>
+                <button mat-menu-item>Sneakers</button>
+              </mat-menu>
+  
+              <mat-menu #amphibians="matMenu">
+                <button mat-menu-item>Shirts</button>
+                <button mat-menu-item>Pants</button>
+              </mat-menu>
+  
+              <mat-menu #reptiles="matMenu">
+                <button mat-menu-item>T shirts</button>
+                <button mat-menu-item>Jeans</button>
+                <button mat-menu-item>Sweatshirts</button>
+                <button mat-menu-item>Ethnic</button>
+              </mat-menu>
+            </li>
+          </ul>
+          <form class="d-flex flexbutton" style="margin-right: 10px;">
+          
+              <a class="btn btn-success" [matBadge]="notificationCount" matBadgeSize="small" matBadgeColor="warn">
+              <i routerLink="cart" class="fa fa-shopping-cart" style="font-size:20px"></i>
+              </a>
+              <!-- <br/>
+              <button mat-raised-button (click)="incrementCount()">+</button>
+              <button mat-raised-button (click)="decreaseCount()">-</button>
+              <button mat-raised-button (click)="resetCount()">reset</button> -->
+  
+          </form>
+          <button mat-button [matMenuTriggerFor]="menu" class="btn btn-success"><i
+              class='fas fa-user' style="font-size:25px"></i></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="openDialog()">Log In</button>
+            <!-- <button mdbBtn color="primary" (click)="openModal()">Open modal</button> -->
+            <button mat-menu-item routerLink="settings">Settings</button>
+            <button mat-menu-item routerLink="admin">Admin</button>
+            <button mat-menu-item routerLink="about">About Us</button>
+            <button mat-menu-item >Sign Out</button>
+          </mat-menu>
+        </div>
+      </div>
+    </nav>
+  </div>

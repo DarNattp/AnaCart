@@ -1,0 +1,15 @@
+.abouthead{
+    background-color:#dee2e6 ;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    padding-top: 40px;
+}
+.aboutcontent{
+    background-color: #dee2e6;
+    margin: 100px;
+}
+agm-map {
+    height: 300px;
+  }
