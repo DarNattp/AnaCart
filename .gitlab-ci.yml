@@ -1,0 +1,11 @@
+stages:
+    - build
+    - test
+
+build_job:
+    stage: build
+    tags: 
+        - powershell
+    script:
+        - cd D:\ANACART\interns-poc
+        - npm run start
