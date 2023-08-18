@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  service:
+    image: service-image
+    build:
+      context: D:\ANACART\interns-poc
+      dockerfile: Dockerfile_services
+    container_name: service_container
+    ports:
+      - "5000:80"
+    depends_on:
+      - mongodb-svc
+    volumes: 
+      - ./service/app:/app
+    networks:
+      - app-network
+
+  web:
+    image: anacart:v1 
+    build: 
+      context: D:\ANACART\interns-poc
+      dockerfile: Dockerfile
+    container_name: anacart_container
+    ports:
+      - "4200:4200"
+    depends_on: 
+      - service
+    volumes: 
+      - ./webvolume/app:/app
+    networks:
+      - app-network
+
+  mongodb-svc:
+    container_name: mongo_container
+    image: mongo:4.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - app-network
+
+volumes:
+  mongodb:
+
+networks:
+  app-network:
+    driver: bridge

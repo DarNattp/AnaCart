@@ -17,15 +17,12 @@ show: boolean = false;
 
   book={
     name:'',
-    username:'',
-    city:'',
-    zip:'',
+    mailid:'',
+    password:'',
+    reEnteredPassword:'',
   }
   isDataAdded = false;
-  
-  // book: any;
-  // booksService: any;
-  // isBookAdded: boolean;
+
   constructor(private booksService:BooksService,public dialog: MatDialog) {
  
   }
@@ -38,12 +35,28 @@ show: boolean = false;
   addBook(): void {
     const data = {
       name: this.book.name,
-      username: this.book.username,
-      city:this.book.city,
-      zip:this.book.zip,
+      mailid: this.book.mailid,
+      password:this.book.password,
+      reEnteredPassword:this.book.reEnteredPassword,
     };
     if (!data.name) {
       alert('Please add details!');
+      this.isDataAdded = false;
+      return;
+    }
+    if (!data.mailid) {
+      alert('Please add details!');
+      this.isDataAdded = false;
+      return;
+    }
+    if (!data.password) {
+      alert('Please add details!');
+      this.isDataAdded = false;
+      return;
+    }
+    if (!data.reEnteredPassword) {
+      alert('Please add details!');
+      this.isDataAdded = false;
       return;
     }
     this.booksService.create(data)

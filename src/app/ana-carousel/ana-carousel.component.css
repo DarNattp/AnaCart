@@ -14,7 +14,7 @@
   margin-bottom: 5%;
   flex-wrap: wrap;
   height: 350px;
-  overflow-Y:scroll;
+  overflow-y:scroll;
 }
 .card{
   margin: 20px;

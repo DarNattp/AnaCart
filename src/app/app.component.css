@@ -4,5 +4,5 @@
 .dynamicbody{
   height: calc(100% - 65px);
   overflow: auto;
-
+  overflow-x: hidden;
 }

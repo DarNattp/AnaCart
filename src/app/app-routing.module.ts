@@ -67,8 +67,6 @@ const routes: Routes = [
     path:'setting/:id',component: DetailsComponent
   },
 
-
-
   {
     path:'**',
     component:AnaPageNotFoundComponent,

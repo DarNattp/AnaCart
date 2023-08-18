@@ -33,16 +33,16 @@
             <input id="user" type="text" class="form-control" name="name" required  [(ngModel)]="book.name">
           </div>
           <div class="group">
-            <label for="username" class="label">Email ID</label>
-            <input id="pass" type="text" class="form-control"  name="username" required  [(ngModel)]="book.username">
+            <label for="mailid" class="label">Mail ID</label>
+            <input id="pass" type="text" class="form-control"  name="mailid" required  [(ngModel)]="book.mailid">
           </div>
           <div class="group">
-            <label for="city" class="label">New Password</label>
-            <input [type]="show ? 'text' : 'password'" id="pass"  class="form-control" name="city" required [(ngModel)]="book.city">
+            <label for="password" class="label">New Password</label>
+            <input [type]="show ? 'text' : 'password'" id="pass"  class="form-control" name="password" required [(ngModel)]="book.password">
           </div>
           <div class="group">
-            <label for="zip" class="label">Re enter password</label>
-            <input [type]="show ? 'text' : 'password'" id="pass" class="form-control" name="zip" [(ngModel)]="book.zip">
+            <label for="reEnteredPassword" class="label">Re enter password</label>
+            <input [type]="show ? 'text' : 'password'" id="pass" class="form-control" name="reEnteredPassword" [(ngModel)]="book.reEnteredPassword">
            
           </div>
           <div class="group">

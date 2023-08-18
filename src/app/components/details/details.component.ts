@@ -34,9 +34,9 @@ export class DetailsComponent implements OnInit {
   setAvailableStatus(status: any): void {
     const data = {
       name: this.currentBook.name,
-      username: this.currentBook.username,
-      city:this.currentBook.city,
-      zip:this.currentBook.zip,
+      mailid: this.currentBook.mailid,
+      password:this.currentBook.password,
+      reEnteredPassword:this.currentBook.reEnteredPassword,
       available: status
     };
 
