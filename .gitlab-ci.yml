@@ -7,7 +7,6 @@ Build_Job:
     tags:
         - powershell
     script:
-        npm install
         npm run build
 Test_Job:
     stage: Test
