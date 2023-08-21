@@ -1,11 +1,30 @@
+# This section defines the different stages your pipeline will have.
+# Stages help organize and control the flow of your CI/CD process.
 stages:
-    - build
-    - test
+  - Build  # First stage: Build
+  - Test   # Second stage: Test
+  - Run    # Third stage: Run
 
-build_job:
-    stage: build
-    tags: 
-        - powershell
-    script:
-    - npm install
-    - npm run build  
+# This job will run in the "Build" stage.
+Build_Job:
+  stage: Build
+  tags:
+    - powershell  # This job should run on runners with the "powershell" tag.
+  script:
+    - npm run build  # Run the "build" command using npm.
+
+# This job will run in the "Test" stage.
+Test_Job:
+  stage: Test
+  tags:
+    - powershell  # This job should run on runners with the "powershell" tag.
+  script:
+    - npm run test  # Run the "test" command using npm.
+
+# This job will run in the "Run" stage.
+Run_Job:
+  stage: Run
+  tags:
+    - powershell  # This job should run on runners with the "powershell" tag.
+  script:
+    - npm run start  # Run the "start" command using npm to start your application.
