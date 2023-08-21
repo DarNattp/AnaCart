@@ -16,8 +16,9 @@ Test_Job:
     script:
         npm install
         npm run test
-Run_Job:
-    stage: Job
+
+Run_Job: 
+    stage: Run
     tags:
         - powershell
     script:
