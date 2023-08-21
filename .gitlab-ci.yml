@@ -1,11 +1,25 @@
 stages:
-    - build
-    - test
-
-build_job:
-    stage: build
-    tags: 
+    - Build
+    - Test
+    - Run
+Build_Job:
+    stage: Build
+    tags:
         - powershell
     script:
-    - npm install
-    - npm run build  
+        npm install
+        npm run build
+Test_Job:
+    stage: Test
+    tags:
+        - powershell
+    script:
+        npm install
+        npm run test
+Run_Job:
+    stage: Job
+    tags:
+        - powerhsell
+    script:
+        npm install
+        npm run start
