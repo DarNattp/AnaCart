@@ -19,7 +19,7 @@ Test_Job:
 Run_Job:
     stage: Job
     tags:
-        - powerhsell
+        - powershell
     script:
         npm install
         npm run start
