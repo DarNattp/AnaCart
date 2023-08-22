@@ -1,19 +1,4 @@
-# This section defines the different stages your pipeline will have.
-# Stages help organize and control the flow of your CI/CD process.
-stages:
-  - Build  # First stage: Build
-  - Test   # Second stage: Test
-  - Run    # Third stage: Run
-
-# This job will run in the "Build" stage.
-Build_Job:
-  stage: Build
-  tags:
-    - powershell  # This job should run on runners with the "powershell" tag.
-  script:
-    - npm run build  # Run the "build" command using npm.
-
-sonarqube-check:
+sonarqube-check: 
   image: 
     name: sonarsource/sonar-scanner-cli:latest
     entrypoint: [""]
@@ -30,10 +15,7 @@ sonarqube-check:
   only:
     - main
 
-
-# This job will run in the "Run" stage.
-Run_Job:
-  stage: Run
+stage: 
   tags:
     - powershell  # This job should run on runners with the "powershell" tag.
   script:
