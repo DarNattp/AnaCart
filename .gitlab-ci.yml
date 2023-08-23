@@ -42,7 +42,7 @@ Run:
   only:
     - main
 Test:
-  stage: test
+  stage: Test
   before_script:
     - 'yarn global add jest'
     - 'yarn add --dev jest-junit'
