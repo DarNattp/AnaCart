@@ -16,9 +16,6 @@ Scan:
   stage: Scan
   tags:
     - powershell
-  image:
-    name: sonarsource/sonar-scanner-cli:latest
-    entrypoint: [""]
   variables:
     SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"
     GIT_DEPTH: "0"
@@ -43,14 +40,6 @@ Run:
     - main
 Test:
   stage: Test
-  before_script:
-    - 'yarn global add jest'
-    - 'yarn add --dev jest-junit'
   script:
-    - 'jest --ci --reporters=default --reporters=jest-junit'
-  artifacts:
-    when: always
-    reports:
-      junit:
-        - junit.xml
+    - npm run test
 
