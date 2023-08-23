@@ -2,6 +2,7 @@ stages:
   - Build
   - Scan
   - Run
+  - Test
 
 Build:
   stage: Build
@@ -40,8 +41,7 @@ Run:
     - npm run start
   only:
     - main
-javascript:
-  image: node:latest
+Test:
   stage: test
   before_script:
     - 'yarn global add jest'
