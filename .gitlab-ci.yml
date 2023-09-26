@@ -4,7 +4,7 @@ stages:
 Build:
   stage: Build
   tags:
-    - powershell
+    - shell
   script:
     - npm install --force
     - npm run build
@@ -12,4 +12,4 @@ Build:
     paths:
       - dist/
     expire_in: week
-
+  
