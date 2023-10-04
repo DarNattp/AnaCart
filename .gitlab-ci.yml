@@ -9,7 +9,7 @@ install:
   tags:
     - shell
   script:
-    - npm install
+    - npm install --force
 
 build:
   stage: build
