@@ -12,7 +12,7 @@ first-job:
   tags:
     - shell
   script:
-    - npm install
+    - npm install --force
   artifacts:
     paths:
       - node_modules
