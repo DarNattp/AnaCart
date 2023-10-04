@@ -1,11 +1,27 @@
+# This is the name of the GitLab CI/CD pipeline.
 stages:
-  - Build
+  - install
+  - build
+  - test
+  - deploy
 
-Build:
-  stage: Build
-  tags:
-    - shell
+# Define jobs for each stage.
+install:
+  stage: install
   script:
-      - npm install --force
-      - npm run build
-  
+    - npm install
+
+build:
+  stage: build
+  script:
+    - npm run build
+
+test:
+  stage: test
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - # Add deployment script here
