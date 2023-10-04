@@ -1,13 +1,10 @@
 stages:
   - build
 
-cache:
-  paths:
-    - node_modules/  # Cache the node_modules directory
-
 build:
   stage: build
   tags:
     - shell
   script:
+    - cd C:\Users\ganes\AnaCart
     - npm install && npm run build
