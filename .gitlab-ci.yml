@@ -7,4 +7,4 @@ build:
     - shell
   script:
     - cd C:\Users\ganes\AnaCart
-    - npm install && npm run build
+    - npm install --force && npm run build
