@@ -16,8 +16,4 @@ Packages:
   script:
     - npm install --force
     - npm run build
-
-  artifacts:
-    paths:
-      - artifacts/
   
