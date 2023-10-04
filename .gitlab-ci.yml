@@ -2,8 +2,6 @@
 stages:
   - install
   - build
-  - test
-  - deploy
 
 # Define jobs for each stage.
 install:
@@ -15,6 +13,3 @@ build:
   stage: build
   script:
     - npm run build
-
-
-    - # Add deployment script here
