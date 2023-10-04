@@ -16,6 +16,7 @@ first-job:
   artifacts:
     paths:
       - node_modules
+    timeout: 20 minutes
 
 second-job:
   stage: run
@@ -26,3 +27,4 @@ second-job:
   artifacts:
     paths:
       - node_modules/
+    timeout: 20 minutes
