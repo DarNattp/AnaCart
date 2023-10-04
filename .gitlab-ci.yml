@@ -1,10 +1,18 @@
+image: node:latest
+
 stages:
   - build
+  - run
 
-build:
+# Job's name
+first-job:
+  # Define stage
   stage: build
+  # What to run on the job.
   tags:
     - shell
   script:
-    - cd C:\Users\ganes\AnaCart
-    - npm install --force && npm run build
+    - npm install
+  artifacts:
+    paths:
+      - node_modules
