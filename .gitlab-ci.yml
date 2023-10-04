@@ -9,8 +9,8 @@ Build:
   script:
   - npm install -g @angular/cli   # Install Angular CLI globally if not already installed
 
-Package:
-  stage: Package
+Packages:
+  stage: Packages
   tags:
     - shell
   script:
