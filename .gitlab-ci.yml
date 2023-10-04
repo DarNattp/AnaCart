@@ -1,4 +1,3 @@
-# This is the name of the GitLab CI/CD pipeline.
 stages:
   - install
   - build
