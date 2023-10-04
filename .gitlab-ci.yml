@@ -16,8 +16,6 @@ Packages:
   script:
     - npm install --force
     - npm run build
-    - mkdir -p artifacts
-    - if exist "dist" (xcopy "dist\*" "artifacts" /E /Y) else (echo "No 'dist' directory found")
 
   artifacts:
     paths:
