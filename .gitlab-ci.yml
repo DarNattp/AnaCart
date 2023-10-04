@@ -1,19 +1,11 @@
 stages:
   - Build
-  - Packages
 
 Build:
   stage: Build
   tags:
     - shell
   script:
-  - npm install -g @angular/cli   # Install Angular CLI globally if not already installed
-
-Packages:
-  stage: Packages
-  tags:
-    - shell
-  script:
-    - npm install --force
-    - npm run build
+      - npm install --force
+      - npm run build
   
