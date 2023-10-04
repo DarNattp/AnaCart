@@ -1,5 +1,6 @@
 stages:
   - Build
+  - Packages
 
 Build:
   stage: Build
@@ -7,9 +8,15 @@ Build:
     - shell
   script:
   - npm install -g @angular/cli   # Install Angular CLI globally if not already installed
-  - npm run build
-  - mkdir -p artifacts
-  - if exist "dist" (xcopy "dist\*" "artifacts" /E /Y) else (echo "No 'dist' directory found")
+
+Package:
+  stage: Package
+  tags:
+    - shell
+  script:
+    - npm run build
+    - mkdir -p artifacts
+    - if exist "dist" (xcopy "dist\*" "artifacts" /E /Y) else (echo "No 'dist' directory found")
 
   artifacts:
     paths:
