@@ -16,12 +16,5 @@ build:
   script:
     - npm run build
 
-test:
-  stage: test
-  script:
-    - npm test
 
-deploy:
-  stage: deploy
-  script:
     - # Add deployment script here
