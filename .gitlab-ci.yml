@@ -16,3 +16,13 @@ first-job:
   artifacts:
     paths:
       - node_modules
+
+second-job:
+  stage: run
+  tags: 
+    - shell
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - node_modules/
