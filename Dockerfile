@@ -19,3 +19,5 @@ FROM nginx:alpine
 COPY --from=node /app/dist/hello-world /usr/share/nginx/html
 
 EXPOSE 4200 80
+
+# Stage
