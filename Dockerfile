@@ -10,7 +10,7 @@ RUN npm install
 
 COPY . /app
 
-RUN npm run build --prod
+RUN npm run build
 
 # Stage 2
 
@@ -20,4 +20,3 @@ COPY --from=node /app/dist/hello-world /usr/share/nginx/html
 
 EXPOSE 4200 80
 
-# Stage
