@@ -1,0 +1,70 @@
+import groovy.json.JsonSlurper
+def findServiceWithLabel(labelKey, labelValue) {
+    def services = sh(script: 'kubectl get services -o json', returnStdout: true).trim()
+    def jsonSlurper = new JsonSlurper()
+    def serviceList = jsonSlurper.parseText(services)
+
+    for (service in serviceList.items) {
+        def labels = service.metadata.labels
+        if (labels && labels[labelKey] == labelValue) {
+            return service.metadata.name
+        }
+    }
+
+    return null
+}
+
+def runZapDAST(serviceName, kubeconfigId) {
+    def targetURL = sh(script: 'kubectl get service/' + serviceName + ' -o json | jq -r ".status.loadBalancer.ingress[0].hostname"', returnStatus: true).trim()
+    def zapCommand = "zap.sh -cmd -quickurl http://${targetURL} -quickprogress -quickout ${ZAP_WORKSPACE}/zap_report.html"
+    
+    withKubeConfig([credentialsId: kubeconfigId]) {
+        sh(zapCommand)
+        archiveArtifacts artifacts: 'zap_report.html'
+    }
+}
+
+pipeline {
+    agent any
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('Git-Checkout') {
+            steps {
+                git branch: 'main', url: 'https://gitlab.com/ganesharavind124/nodejs.git'
+            }
+        }
+        stage('Kubernetes Deployment') {
+            steps {
+                script {
+                    def configFile = 'deploymentservice.yml'
+                    if (fileExists(configFile)) {
+                        kubernetesDeploy(configs: configFile, kubeconfigId: 'kubernetes')
+                    } else {
+                        error("Error: $configFile does not exist")
+                    }
+                }
+            }
+        }
+        stage('Run DAST Using ZAP') {
+            steps {
+                script {
+                    try {
+                        def serviceName = findServiceWithLabel('zap-target', 'true')
+                        if (serviceName) {
+                            runZapDAST(serviceName, 'kubernetes')
+                        } else {
+                            error("No service found with the 'zap-target' label set to 'true'")
+                        }
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        error("Error during ZAP DAST: ${e.message}")
+                    }
+                }
+            }
+        }
+    }
+}
