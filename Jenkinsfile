@@ -29,13 +29,13 @@ pipeline {
                             if (fileExists('pom.xml')) { 
                                 sh 'mvn clean verify sonar:sonar' // Run SonarCloud analysis for Maven application	
                             } else if (fileExists('package.json')) { 
-                                sh '/opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner' // Use the full path to SonarScanner
+                                sh '/opt/sonar-scanner/bin/sonar-scanner' // Use the full path to SonarScanner
                             } else if (fileExists('go.mod')) {
-                                sh '/opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner' // Use the full path to SonarScanner
+                                sh '/opt/sonar-scanner/bin/sonar-scanner' // Use the full path to SonarScanner
                             } else if (fileExists('Gemfile')) {
-                                sh '/opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner' // Use the full path to SonarScanner
+                                sh '/opt/sonar-scanner/bin/sonar-scanner' // Use the full path to SonarScanner
                             } else if (fileExists('requirements.txt')) {
-                                sh '/opt/sonar-scanner-5.0.1.3006-linux/bin/sonar-scanner' // Use the full path to SonarScanner
+                                sh '/opt/sonar-scanner/bin/sonar-scanner' // Use the full path to SonarScanner
                             } else {
                                 currentBuild.result = 'FAILURE'
                                 error("Unsupported application type: No compatible build steps available.")
