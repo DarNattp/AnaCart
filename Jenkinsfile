@@ -1,22 +1,23 @@
+// Define the detectJavaVersion function outside of the pipeline block
 def detectJavaVersion() {
-  def javaVersionOutput = sh(script: 'java -version 2>&1', returnStatus: false, returnStdout: true).trim()
-  def javaVersionMatch = javaVersionOutput = ~/openjdk version "(\d+\.\d+)/
+    def javaVersionOutput = sh(script: 'java -version 2>&1', returnStatus: false, returnStdout: true).trim()
+    def javaVersionMatch = javaVersionOutput =~ /openjdk version "(\d+\.\d+)/
 
-  if (javaVersionMatch) {
-    def javaVersion = javaVersionMatch[0][1]
+    if (javaVersionMatch) {
+        def javaVersion = javaVersionMatch[0][1]
 
-    if (javaVersion.startsWith("1.8")) {
-      return '8'
-    } else if (javaVersion.startsWith("11")) {
-      return '11'
-    } else if (javaVersion.startsWith("17")) {
-      return '17'
+        if (javaVersion.startsWith("1.8")) {
+            return '8'
+        } else if (javaVersion.startsWith("11")) {
+            return '11'
+        } else if (javaVersion.startsWith("17")) {
+            return '17'
+        } else {
+            error("Unsupported Java version detected: ${javaVersion}")
+        }
     } else {
-      error("Unsupported Java version detected: ${javaVersion}")
+        error("Java version information not found in output.")
     }
-  } else {
-    error("Java version information not found in output.")
-  }
 }
 
 def pipelineError = false
