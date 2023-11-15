@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: anacart-deployment
+  name: cart-deployment
   labels:
-    app: anacart
+    app: cart
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: anacart
+      app: cart
   template:
     metadata:
       labels:
-        app: anacart
+        app: cart
     spec:
       containers:
-      - name: anacart
+      - name: cart
         image: ganesharavind124/anacart:latest
         ports:
         - containerPort: 80
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: anacartservice
+  name: cartservice
 spec:
   type: NodePort
   selector:
-    app: anacart
+    app: cart
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 32767
+      nodePort: 32765
