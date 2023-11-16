@@ -314,21 +314,25 @@ stage('snyk_analysis') {
       }
     }
     stage('Build and Push Docker Image') {
-      steps {
-        script {
-          try {
-            withDockerRegistry(credentialsId: DOCKER_REGISTRY_CREDENTIALS, toolName: DOCKER_TOOL, url: DOCKER_URL) {
-                def dockerImage = docker.build(DOKCER_IMAGE, ".")
-                    // Push the built Docker image
-                dockerImage.push()
+        steps {
+            script {
+                try {
+                    if (fileExists('Dockerfile')) {
+                        withDockerRegistry(credentialsId: DOCKER_REGISTRY_CREDENTIALS, toolName: DOCKER_TOOL, url: DOCKER_URL) {
+                            def dockerImage = docker.build(DOCKER_IMAGE, ".")
+                            // Push the built Docker image
+                            dockerImage.push()
+                        }
+                    } else {
+                        echo "Dockerfile not found. Skipping Docker image build and push."
+                    }
+                } catch (Exception e) {
+                    currentBuild.result = 'FAILURE'
+                    pipelineError = true
+                    echo "Error during Docker image build and push: ${e.message}"
+                }
             }
-          } catch (Exception e) {
-            currentBuild.result = 'FAILURE'
-            pipelineError = true
-            echo "Error during Docker image push: ${e.message}"
-          }
         }
-      }
     }
     stage('Trivy Scan') {
         steps {
