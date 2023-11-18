@@ -51,13 +51,13 @@ pipeline {
                             if (fileExists('pom.xml')) {
                                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                             } else if (fileExists('package.json')) {
-                                sh "${sonarscanner} -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_testjs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
+                                sh "/usr/local/bin/sonar-scanner -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_testjs -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
                             } else if (fileExists('go.mod')) {
-                                sh "${sonarscanner} -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_go -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
+                                sh "/usr/local/bin/sonar-scanner -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_go -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
                             } else if (fileExists('Gemfile')) {
-                                sh "${sonarscanner} -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_ruby -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
+                                sh "/usr/local/bin/sonar-scanner -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_ruby -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
                             } else if (fileExists('requirements.txt')) {
-                                sh "${sonarscanner} -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_python -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
+                                sh "/usr/local/bin/sonar-scanner -Dsonar.organization=jenkeen -Dsonar.projectKey=jenkeen_python -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b8c55c159b1fd559baaccf9bee42344faed0a7b4"
                             } else {
                                 currentBuild.result = 'FAILURE'
                                 pipelineError = true
