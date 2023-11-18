@@ -373,7 +373,7 @@ stage('snyk_analysis') {
             def targetURL =  "http://192.168.49.2:32765" // Use the obtained service URL as the target URL
             def zapCommand = "zap -cmd -quickurl ${targetURL}"
             sh(zapCommand)
-            archiveArtifacts artifacts: 'zap_report.html'
+            archiveArtifacts artifacts: '**/OWASPZAPReport.xml', onlyIfSuccessful: true
           } catch (Exception e) {
             currentBuild.result = 'FAILURE'
             error("Error during ZAP DAST: ${e.message}")
