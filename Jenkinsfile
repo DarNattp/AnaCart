@@ -371,10 +371,9 @@ stage('snyk_analysis') {
         script {
           try {
             def targetURL =  "http://192.168.49.2:32765" // Use the obtained service URL as the target URL
-            def zapCommand = "zaproxy -cmd -quickurl ${targetURL}"
-            //sh(zapCommand)
-            sh("echo zap_report.html")
-            //archiveArtifacts artifacts: 'zap_report.html'
+            def zapCommand = "zap -cmd -quickurl ${targetURL}"
+            sh(zapCommand)
+            archiveArtifacts artifacts: 'zap_report.html'
           } catch (Exception e) {
             currentBuild.result = 'FAILURE'
             error("Error during ZAP DAST: ${e.message}")
