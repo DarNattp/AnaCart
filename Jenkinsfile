@@ -370,7 +370,7 @@ stage('snyk_analysis') {
       steps {
         script {
           try {
-            def targetURL =  "http://192.168.58.2:32765" // Use the obtained service URL as the target URL
+            def targetURL =  "http://192.168.49.2:32765" // Use the obtained service URL as the target URL
             def zapCommand = "zaproxy -cmd -quickurl ${targetURL}"
             //sh(zapCommand)
             sh("echo zap_report.html")
